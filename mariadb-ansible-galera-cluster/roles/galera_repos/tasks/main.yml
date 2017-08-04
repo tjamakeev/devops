@@ -1,0 +1,25 @@
+---
+#- name: Add MariaDB repo
+#  template: src=yum.repos.d/mariadb.repo.j2 dest=/etc/yum.repos.d/mariadb.repo
+#    owner=root group=root mode=0644
+
+#- name: Add EPEL repo
+#  yum:
+#    name: epel-release
+#    update_cache: yes
+#    state: present
+
+- name: Obtain public key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: '0xF1656F24C74CD1D8'
+    state: present
+
+- name: Add repository
+  apt_repository:
+    repo: 'deb [arch=amd64,i386,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu xenial main'
+    state: present
+
+- name: Update apt cache
+  apt: update_cache=yes
+

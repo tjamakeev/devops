@@ -1,0 +1,15 @@
+---
+- name: Install MariaDB server and rsync packages
+  apt: name={{ item }} state=present
+  with_items:
+    - mariadb-server
+    - rsync
+
+#- name: Install Percona tool packages
+#  yum: name={{ item }} state=present
+#  with_items:
+#    - percona-xtrabackup
+#    - socat
+
+- name: Install MySQL-python
+  apt: name=python-mysqldb state=present

@@ -1,0 +1,2 @@
+[galera_cluster]
+galera-db-04 ansible_user=root ansible_eth1_ipv4_address=192.168.56.14
