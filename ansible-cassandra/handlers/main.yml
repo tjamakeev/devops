@@ -1,0 +1,9 @@
+---
+# handlers file for ansible-cassandra
+- name: "restart cassandra"
+  service:
+    name: "cassandra"
+    state: "restarted"
+
+- name: restart ufw
+  service: name=ufw state=restarted

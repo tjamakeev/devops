@@ -1,0 +1,12 @@
+---
+# tasks file for ansible-cassandra
+- include: debian.yml
+  when: ansible_os_family == "Debian"
+
+- include: security.yml
+
+- include: cleanup.yml
+  when: cassandra_config
+
+- include: config.yml
+  when: cassandra_config

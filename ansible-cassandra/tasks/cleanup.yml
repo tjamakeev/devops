@@ -1,0 +1,11 @@
+- name: Stopping Cassnadra service
+  service: name="cassandra" state="stopped"
+
+- name: Removing cassandra data folder
+  file: path=/var/lib/cassandra/data/ state="absent"
+
+- name: Removing cassandra commitlog folder
+  file: path=/var/lib/cassandra/commitlog/ state="absent"
+
+- name: Removing cassandra system.log
+  file: path=/var/log/cassandra/system.log state="absent"

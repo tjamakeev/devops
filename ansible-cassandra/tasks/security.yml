@@ -1,0 +1,28 @@
+---
+- name: Start and enable ufw
+  service: name=ufw state=started enabled=yes
+
+- name: Set firewall default policy
+  ufw: state=enabled policy=reject
+
+- name: Open firewall for ssh access
+  ufw: rule=allow port=ssh proto=tcp state=reloaded
+
+- name: Open firewall for external access to MySQL
+  ufw: rule=allow port=mysql proto=tcp state=reloaded
+
+
+- name: Open Galera ports on firewall
+  ufw: rule={{ item.rule }} port={{ item.port }} proto={{ item.proto }}
+  with_items:
+    - { rule: 'allow', port: '7000', proto: 'tcp' }
+    - { rule: 'allow', port: '7001', proto: 'tcp' }
+    - { rule: 'allow', port: '9042', proto: 'tcp' }
+  notify:
+    - restart ufw
+
+#- name: ensure libselinux-python instlled
+#  apt: pkg=python-selinux state=present
+
+#- name: Disable SELinux
+#  selinux: policy=targeted state=permissive
