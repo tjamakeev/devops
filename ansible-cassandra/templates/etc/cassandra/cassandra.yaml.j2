@@ -303,7 +303,8 @@ seed_provider:
 {% if not cassandra_cluster_setup %}
           - seeds: "{{ cassandra_seeds }}"
 {% elif cassandra_cluster_setup %}
-          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['ansible_' + cassandra_listen_interface]['ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+#          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['ansible_' + cassandra_listen_interface]['ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['hub_node_ip'] }}{% if not loop.last %},{% endif %}{% endfor %}"
 {% endif %}
 
 # For workloads with more data than can fit in memory, Cassandra's
@@ -424,7 +425,7 @@ listen_interface: {{ cassandra_listen_interface }}
 
 # Address to broadcast to other Cassandra nodes
 # Leaving this blank will set it to the same value as listen_address
-# broadcast_address: 1.2.3.4
+broadcast_address: {{ hub_node_ip }}
 
 # When using multiple physical network interfaces, set this
 # to true to listen on broadcast_address in addition to
