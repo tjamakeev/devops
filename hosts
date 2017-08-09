@@ -1,4 +1,4 @@
-[cassandra-cluster-nodes]
+[galera_cluster]
 hub-host-us-east-2  ansible_user=root  ansible_ssh_host=18.220.132.10  hub_node_ip=18.220.132.10
 hub-host-us-east-1  ansible_user=root  ansible_ssh_host=34.232.201.166  hub_node_ip=34.232.201.166
 hub-host-ap-south-1  ansible_user=root  ansible_ssh_host=13.126.94.28  hub_node_ip=13.126.94.28
