@@ -16,7 +16,7 @@ Role Variables
 ```
 ---
 # defaults file for ansible-cassandra
-cassandra_cluster_group: 'cassandra-cluster-nodes'
+cassandra_cluster_group: 'galera_cluster'
 cassandra_cluster_name: 'Test Cluster'
 cassandra_cluster_setup: false
 cassandra_commitlog_directory: '/var/lib/cassandra/commitlog'
@@ -46,7 +46,7 @@ Example Playbook
 
 ```
 ---
-- hosts: cassandra-cluster-nodes
+- hosts: galera_cluster
   become: true
   vars:
     cassandra_cluster_setup: true

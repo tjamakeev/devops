@@ -1,4 +1,4 @@
-- hosts: cassandra-cluster-nodes
+- hosts: galera_cluster
   become: true
   vars:
     cassandra_cluster_setup: true
