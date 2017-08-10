@@ -13,7 +13,7 @@ cassandra_data_file_directories:
   - '/var/lib/cassandra/data'
 cassandra_hints_directory: '/var/lib/cassandra/hints'
 cassandra_listen_address: "{{ hostvars[inventory_hostname]['ansible_' + cassandra_listen_interface]['ipv4']['address'] }}"
-cassandra_listen_interface: 'enp0s3' # eth0|eth1|enp0s8
+cassandra_listen_interface: 'eth1' # eth0|eth1|enp0s8
 cassandra_log_dir: '/var/log/cassandra'
 cassandra_root_dir: '/etc/cassandra'
 cassandra_saved_caches_directory: '/var/lib/cassandra/saved_caches'
