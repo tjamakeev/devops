@@ -12,3 +12,12 @@
   service:
     name: "cassandra"
     state: "restarted"
+
+- name: config | Configuring Cassandra Datacenter
+  template:
+    src: "etc/cassandra/cassandra-rackdc.properties.j2"
+    dest: "{{ cassandra_root_dir }}/cassandra-rackdc.properties"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  notify: "restart cassandra"

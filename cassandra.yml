@@ -4,7 +4,7 @@
     cassandra_cluster_setup: true
     cassandra_config: true
     cassandra_listen_interface: eth0
-    cassandra_snitch: Ec2MultiRegionSnitch # SimpleSnitch | Ec2MultiRegionSnitch etc..
+    cassandra_snitch: GossipingPropertyFileSnitch
     pri_domain_name: 'hub.subut.ai'
   roles:
     - role: ansible-oracle-java8
