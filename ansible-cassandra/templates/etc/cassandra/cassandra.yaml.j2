@@ -304,7 +304,9 @@ seed_provider:
           - seeds: "{{ cassandra_seeds }}"
 {% elif cassandra_cluster_setup %}
 #          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['ansible_' + cassandra_listen_interface]['ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
-          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['hub_node_ip'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+#          - seeds: "{% for node in groups[cassandra_cluster_group] %}{{ hostvars[node]['hub_node_ip'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+           - seeds: "{% for node in groups[cassandra_cluster_group] %}{% if hostvars[node]['is_seed'] %}{{ hostvars[node]['hub_node_ip'] }}{% if not loop.last %},{% endif %}{% endif %}{% endfor %}"
+
 {% endif %}
 
 # For workloads with more data than can fit in memory, Cassandra's
