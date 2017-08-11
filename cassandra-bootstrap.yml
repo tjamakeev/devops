@@ -1,0 +1,5 @@
+- hosts: cassandra-cluster-nodes
+  serial: 1
+  roles:
+    - role: ansible-cassandra-bootstrap
+  tasks:

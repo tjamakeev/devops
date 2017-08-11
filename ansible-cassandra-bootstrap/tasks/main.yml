@@ -1,0 +1,15 @@
+---
+- name: "config | Stopping cassandra"
+  service:
+    name: "cassandra"
+    state: "stopped"
+
+
+- name: "config | Starting cassandra"
+  service:
+    name: "cassandra"
+    state: "started"
+
+
+- name: Wait for server autostart
+  wait_for: path=/var/log/cassandra/system.log search_regex="Starting listening for CQL clients"

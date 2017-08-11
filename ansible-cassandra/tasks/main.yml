@@ -9,5 +9,4 @@
   when: cassandra_config
 
 - include: config.yml
-  serial: 1
   when: cassandra_config
