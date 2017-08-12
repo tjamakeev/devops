@@ -3,7 +3,7 @@
   vars:
     cassandra_cluster_setup: true
     cassandra_config: true
-    cassandra_listen_interface: enp0s3
+    cassandra_listen_interface: eth0
     cassandra_snitch: GossipingPropertyFileSnitch
     pri_domain_name: 'hub.subut.ai'
   roles:
