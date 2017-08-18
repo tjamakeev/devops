@@ -19,6 +19,7 @@ wsrep_cluster_address="gcomm://
 wsrep_cluster_name={{ galera_wsrep_cluster_name }}
 wsrep_node_name={{ ansible_hostname }}
 wsrep_node_address={{ hub_node_ip }}
+wsrep_retry_autocommit=3
 binlog_format=row
 default_storage_engine=InnoDB
 innodb_autoinc_lock_mode=2
