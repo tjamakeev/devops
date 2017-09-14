@@ -4,7 +4,7 @@
 #  file: path=/etc/mysql/conf.d state=directory mode=0755
 
 - name: Copy my.cnf
-  copy: /tmp/my.cnf dest=/etc/mysql/  mode=777
+  copy: src=/tmp/my.cnf dest=/etc/mysql/  mode=777
 
 - name: Add galera configuration
   template: src=server.cnf.j2 dest=/etc/mysql/conf.d/galera.cnf

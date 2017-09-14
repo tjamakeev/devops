@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fa939dd-7a35-4a76-96b8-a12e4391989a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mariadb-ansible-galera-cluster/roles/galera_conf/tasks/main.yml" afterPath="$PROJECT_DIR$/mariadb-ansible-galera-cluster/roles/galera_conf/tasks/main.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/mariadb-ansible-galera-cluster/roles/galera_conf/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -747,12 +746,12 @@
       <workItem from="1504766314351" duration="633000" />
       <workItem from="1505054589382" duration="697000" />
       <workItem from="1505299904156" duration="1361000" />
-      <workItem from="1505400039960" duration="4170000" />
+      <workItem from="1505400039960" duration="5004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42949000" />
+    <option name="totallyTimeSpent" value="43783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -1174,7 +1173,7 @@
     <entry file="file://$PROJECT_DIR$/mariadb-ansible-galera-cluster/roles/galera_conf/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
           <folding />
         </state>
       </provider>
